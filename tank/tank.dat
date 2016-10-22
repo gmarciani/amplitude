@@ -1,0 +1,9 @@
+# * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+# The Tank Problem
+# Dataset
+# * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+
+param sheet:=150;
+param side:=10;
+param hmin:=3;
+param hmax:=4.5;
