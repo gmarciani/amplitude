@@ -1,0 +1,9 @@
+/*******************************************************************************
+ * DANTZIG PROBLEM (Dataset)
+/******************************************************************************/
+
+param W := 70; # workers
+param J := 70; # jobs
+
+# capacities of worker w to execute job j
+let {i in 1..W, j in 1..J} C[i,j] := Uniform(-10, 10);
