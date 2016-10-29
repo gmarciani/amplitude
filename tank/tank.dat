@@ -1,9 +1,10 @@
-# * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-# The Tank Problem
-# Dataset
-# * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+/*******************************************************************************
+ * TANK PROBLEM (Dataset)
+ *
+ *
+/******************************************************************************/
 
-param sheet:=150;
-param side:=10;
-param hmin:=3;
-param hmax:=4.5;
+param SHEET := 150; # Sheet area (m^2)
+param SIDE  := 10;  # Room side (m)
+param HMIN  := 3;   # Room minimum height (m)
+param HMAX  := 4.5; # Room maximum height (m)
