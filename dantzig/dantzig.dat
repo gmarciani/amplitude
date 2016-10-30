@@ -2,6 +2,8 @@
  * DANTZIG PROBLEM (Dataset)
 /******************************************************************************/
 
+data;
+
 param W := 70; # workers
 param J := 70; # jobs
 
