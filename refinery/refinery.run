@@ -1,0 +1,12 @@
+/*******************************************************************************
+ * REFINERY PROBLEM (Script)
+/******************************************************************************/
+
+model refinery.mod;
+data refinery.dat;
+option solver snopt;
+solve;
+
+display pipes;
+display x;
+display y;

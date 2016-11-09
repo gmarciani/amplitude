@@ -1,0 +1,23 @@
+/*******************************************************************************
+ * REFINERY PROBLEM (Dataset)
+/******************************************************************************/
+
+data;
+
+# harbors
+set H := A B C;
+
+# a specific harbor
+param h := A;
+
+# harbors X,Y coordinates
+param: xpos ypos :=
+    A   0   0
+    B   3   4
+    C   7   3;
+
+# radius
+param r := 3.6;
+
+let x := 100;
+let y := 100;
