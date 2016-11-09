@@ -1,0 +1,11 @@
+/*******************************************************************************
+ * TRASH PROBLEM (Script)
+/******************************************************************************/
+
+model trash.mod;
+data trash.dat;
+option solver cplex;
+solve;
+
+display profit;
+display x;

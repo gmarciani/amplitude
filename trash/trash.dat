@@ -1,0 +1,37 @@
+/*******************************************************************************
+ * TRASH PROBLEM (Dataset)
+/******************************************************************************/
+
+data;
+
+# trashes
+set T := I M;
+
+# materials
+set M := V P;
+
+# trash cost (euros/ton)
+# trashes maximum amount (tons/trash)
+param:  TCost   TMax :=
+    I   125     150
+    M   190     90;
+
+# percentage of material extractable from trash
+param EPerc:
+        I   M   :=
+    V   30  60
+    P   25  30  ;
+
+# material extraction costs (euros/ton)
+param ECost:
+        I   M   :=
+    V   90  20
+    P   65  15  ;
+
+# material profit (euros/ton)
+param: MPrice :=
+    V   300
+    P   250;
+
+# cost for residual trash (euros/ton)
+param ResCost := 15;
