@@ -1,0 +1,11 @@
+/*******************************************************************************
+ * DANTZIG PROBLEM (Script)
+/******************************************************************************/
+
+model dantzig.mod;
+data dantzig.dat;
+option solver knitro;
+solve;
+
+display utility;
+display {i in 1..W, j in 1..J : x[i,j]>0} x[i,j];

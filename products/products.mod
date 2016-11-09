@@ -1,5 +1,5 @@
 /*******************************************************************************
- * PRODUCTION PROBLEM (Model)
+ * PRODUCTS PROBLEM (Model)
  *
 * A company produces products P.
 * Each product is sold at price Pprice.
@@ -22,12 +22,12 @@ param Pmat {P,M} >= 0;  # prime material needed by product p (kg)
 param Mprice {M} >= 0;  # price of prime material m (euro/kg)
 param Mmax {M} >= 0;    # prime material monthly limit (kg/month)
 
-var x {P} >= 0;         # production unit of product p.
+var x {P} >= 0 integer; # production unit of product p.
 
 maximize profit:
-    + (sum {p in P} Pprice[p]*x[p])
-    - (sum {p in P} x[p]*Pwork[p]*Wprice)
-    - (sum {p in P, m in M} x[p]*Pmat[p,m]*Mprice[m]);
+    + sum {p in P} (Pprice[p]*x[p])
+    - Wprice*sum {p in P} (Pwork[p]*x[p])
+    - sum {p in P, m in M} (Mprice[m]*Pmat[p,m]*x[p]);
 
 subject to material_limit {m in M}: # prime material monthly limit
-    sum {p in P} x[p]*Pmat[p,m] <= Mmax[m];
+    sum {p in P} (Pmat[p,m]*x[p]) <= Mmax[m];

@@ -1,0 +1,11 @@
+/*******************************************************************************
+ * PRODUCTS PROBLEM (Script)
+/******************************************************************************/
+
+model products.mod;
+data products.dat;
+option solver cplex;
+solve;
+
+display profit;
+display x;

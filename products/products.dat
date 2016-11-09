@@ -1,36 +1,36 @@
 /*******************************************************************************
- * PRODUCTION PROBLEM (Dataset)
+ * PRODUCTS PROBLEM (Dataset)
 /******************************************************************************/
 
 data;
 
 # type of products
-set P := 1 2 3;
+set P := P1 P2 P3;
 
 # type of prima material
-set M := 1 2 3 4;
+set M := M1 M2 M3 M4;
 
 # sell price of product p (euro/unit)
 # working hour for product p (hour/unit)
 param:  Pprice  Pwork :=
-    1   2000    10
-    2   2500    12
-    3   4000    20    ;
+    P1   2000    10
+    P2   2500    12
+    P3   4000    20    ;
 
 # work-hour price (euro)
 param Wprice := 100;
 
 # prime material needed by product p (kg)
 param Pmat:
-        1   2   3   4  :=
-    1   2   10  4   2
-    2   6   20  3   2
-    3   7   2   20  15 ;
+        M1  M2  M3  M4  :=
+    P1  2   10  4   2
+    P2  6   20  3   2
+    P3  7   2   20  15 ;
 
 # price of prime material m (euro/kg)
 # prime material monthly limit (kg/month)
 param:  Mprice  Mmax :=
-    1   10      3000
-    2   15      2000
-    3   20      5000
-    4   10      6000 ;
+    M1   10      3000
+    M2   15      2000
+    M3   20      5000
+    M4   10      6000 ;

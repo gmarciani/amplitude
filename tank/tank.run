@@ -1,0 +1,12 @@
+/*******************************************************************************
+ * TANK PROBLEM (Script)
+/******************************************************************************/
+
+model tank.mod;
+data tank.dat;
+option solver snopt;
+solve;
+
+display volume;
+display x1;
+display x2;
