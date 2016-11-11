@@ -4,6 +4,17 @@
 
 model polygon.mod;
 data polygon.dat;
+option solver snopt;
+
+/*
+for {k in 3..10} {
+  let N := k;
+  solve;
+}
+*/
+
 solve;
 
 printf {i in 1..N} "Vertex %d: (%12.6f,%12.6f)\n", i, r[i]*cos(a[i]), r[i]*sin(a[i]);
+
+display area;
