@@ -1,12 +1,12 @@
 /*******************************************************************************
- * DANTZIG PROBLEM (Model)
- *
+* DANTZIG PROBLEM (Model)
+*
 * Suppose we need to assign W employees to J different jobs.
 * Employee skills are not all the same, so you want to choose the assignment
 * that maximizes the overall success of the jobs.
 * Clearly, every employee must be assigned to a job, and each job should be
 * assigned to an employee.
-/******************************************************************************/
+*******************************************************************************/
 
 reset;
 

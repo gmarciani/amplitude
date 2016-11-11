@@ -1,12 +1,12 @@
 /*******************************************************************************
- * TRASH PROBLEM (Model)
- *
+* TRASH PROBLEM (Model)
+*
 * A company must locate a refinery.
 * The refinery must be connected by pipes to a set of habors.
 * Given a specific harbor, the refinery cannot be locate south of it and must
 * be radius Km far away from it.
 * Determine the refinery position, so to minimize pipes lenght.
-/******************************************************************************/
+*******************************************************************************/
 
 reset;
 

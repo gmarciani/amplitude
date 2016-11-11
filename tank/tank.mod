@@ -1,16 +1,16 @@
 /*******************************************************************************
- * TANK PROBLEM (Model)
- *
- * A chemical industry intends to use the residual sheet metal, building a tank
- * to be used for storage of a liquid product.
- * The sheet can be cut and welded at will, it is available for a total of
- * 150m^2 and is to be used throughout. The tank must be in a square hall,
- * with the side of 10m, and the height sloping roof of 4.5m to 3m.
- * For sake of simplicity, it is assumed that the tank has the shape of a prism
- * with a square base.
- * We determine the size of the tank, so as to maximize the volume of liquid
- * that can be contained there.
-/******************************************************************************/
+* TANK PROBLEM (Model)
+*
+* A chemical industry intends to use the residual sheet metal, building a tank
+* to be used for storage of a liquid product.
+* The sheet can be cut and welded at will, it is available for a total of
+* 150m^2 and is to be used throughout. The tank must be in a square hall,
+* with the side of 10m, and the height sloping roof of 4.5m to 3m.
+* For sake of simplicity, it is assumed that the tank has the shape of a prism
+* with a square base.
+* We determine the size of the tank, so as to maximize the volume of liquid
+* that can be contained there.
+*******************************************************************************/
 
 reset;
 

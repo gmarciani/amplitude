@@ -1,6 +1,6 @@
 /*******************************************************************************
- * PRODUCTS PROBLEM (Model)
- *
+* PRODUCTS PROBLEM (Model)
+*
 * A company produces products P.
 * Each product is sold at price Pprice.
 * Each product needs a work of Pwork hours at price Wprice euros/hour.
@@ -9,7 +9,7 @@
 * The company can acquire Mmax kg of prime material, monthly.
 * Determine the monthly production plan of products, so to maximixe the
 * monthly profit.
-/******************************************************************************/
+*******************************************************************************/
 
 reset;
 
