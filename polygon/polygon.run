@@ -1,20 +1,50 @@
 /*******************************************************************************
 * POLYGON PROBLEM (Script)
 *******************************************************************************/
-
+reset;
 model polygon.mod;
 data polygon.dat;
+
+param iter;
+
+option snopt_options "outlev=1", solver snopt;
 option solver snopt;
 
-/*
+printf "POLYGON PROBLEM\n" >> out.txt;
+
 for {k in 3..10} {
   let N := k;
+  printf "Vertices: %d\n", N >> out.txt;
+
+  # starting point: vertices equally distributed (radius 0.5; angle in [0, pi].
+  let {i in 1..N-1} r[i] := 0.5;
+  let {i in 1..N-1} a[i] := pi*i/N;
+
   solve;
+
+  if (solve_result_num == 0) then {
+    printf "Problem solved!\n";
+    printf {i in 1..N} "Vertex %d: (%12.6f,%12.6f)\n", i, r[i]*cos(a[i]), r[i]*sin(a[i]) >> out.txt;
+  } else {
+    printf "No solution from this initial point\n";
+    let iter := 0;
+    repeat while (iter <= 100) {
+      let iter := iter+1;
+  		let {i in 1..N-1} r[i] := Uniform(0,1);
+  		let a[1] := Uniform(0,pi);
+  		for {j in 2..N-1} {
+  			let a[j] := min(pi,a[j-1]+0.5*Uniform(0,pi));
+  		}
+  		display r,a;
+  		solve;
+  		if (solve_result_num == 0) then {
+  			printf "Problem solved!\n";
+  			printf {i in 1..N} "Vertex %d: (%12.6f,%12.6f)\n", i, r[i]*cos(a[i]), r[i]*sin(a[i]) >> out.txt;
+  			break;
+  		}
+
+  		if (iter == 100) then printf "No way\n";
+
+    }
+  }
 }
-*/
-
-solve;
-
-printf {i in 1..N} "Vertex %d: (%12.6f,%12.6f)\n", i, r[i]*cos(a[i]), r[i]*sin(a[i]);
-
-display area;
