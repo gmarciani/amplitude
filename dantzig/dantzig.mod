@@ -1,24 +1,35 @@
-/*******************************************************************************
-* DANTZIG PROBLEM (Model)
-*
-* Suppose we need to assign W employees to J different jobs.
-* Employee skills are not all the same, so you want to choose the assignment
-* that maximizes the overall success of the jobs.
-* Clearly, every employee must be assigned to a job, and each job should be
-* assigned to an employee.
-*******************************************************************************/
-
+#===============================================================================
+# DANTZIG PROBLEM (Model)
+#
+# We need to assign W employees to J different jobs.
+# Employee skills are not all the same, so you want to choose the assignment
+# that maximizes the overall success of the jobs.
+# Clearly, every employee must be assigned to a job, and each job should be
+# assigned to an employee.
+#===============================================================================
 reset;
 
+#===============================================================================
+# PARAMETERS
+#===============================================================================
 param W > 0 integer;    # workers
 param J > 0 integer;    # jobs
 param C {1..W, 1..J};   # capacities of worker w to execute job j
 
+#===============================================================================
+# DECISION VARIABLES
+#===============================================================================
 var x {1..W, 1..J} binary;	# assignments of worker w to job j
 
+#===============================================================================
+# OBJECTIVE
+#===============================================================================
 maximize utility: # utility of assignments
     sum {i in 1..W, j in 1..J} C[i,j]*x[i,j];
 
+#===============================================================================
+# BOUNDS
+#===============================================================================
 subject to unicity_job_worker {i in 1..W}: # one job each worker
     sum {j in 1..J} x[i,j] = 1;
 subject to unicity_worker_job {j in 1..J}: # one worker each job

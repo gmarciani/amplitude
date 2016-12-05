@@ -1,0 +1,79 @@
+============================================================================= 
+DANTZIG PROBLEM 
+Model : dantzig.mod 
+Data  : dantzig.dat 
+Solver: KNITRO 
+Author: Giacomo Marciani <gmarciani@acm.org> 
+==============================================================================
+Utility: 669.322849
+Workers/Jobs
+Worker 1 Job 59
+Worker 2 Job 40
+Worker 3 Job 7
+Worker 4 Job 18
+Worker 5 Job 29
+Worker 6 Job 56
+Worker 7 Job 4
+Worker 8 Job 21
+Worker 9 Job 68
+Worker 10 Job 34
+Worker 11 Job 60
+Worker 12 Job 32
+Worker 13 Job 2
+Worker 14 Job 65
+Worker 15 Job 16
+Worker 16 Job 6
+Worker 17 Job 38
+Worker 18 Job 46
+Worker 19 Job 37
+Worker 20 Job 33
+Worker 21 Job 58
+Worker 22 Job 52
+Worker 23 Job 14
+Worker 24 Job 27
+Worker 25 Job 41
+Worker 26 Job 48
+Worker 27 Job 25
+Worker 28 Job 13
+Worker 29 Job 42
+Worker 30 Job 36
+Worker 31 Job 64
+Worker 32 Job 62
+Worker 33 Job 49
+Worker 34 Job 51
+Worker 35 Job 47
+Worker 36 Job 26
+Worker 37 Job 61
+Worker 38 Job 55
+Worker 39 Job 45
+Worker 40 Job 35
+Worker 41 Job 11
+Worker 42 Job 50
+Worker 43 Job 1
+Worker 44 Job 54
+Worker 45 Job 3
+Worker 46 Job 23
+Worker 47 Job 12
+Worker 48 Job 28
+Worker 49 Job 22
+Worker 50 Job 70
+Worker 51 Job 39
+Worker 52 Job 30
+Worker 53 Job 5
+Worker 54 Job 10
+Worker 55 Job 69
+Worker 56 Job 31
+Worker 57 Job 43
+Worker 58 Job 19
+Worker 59 Job 44
+Worker 60 Job 20
+Worker 61 Job 8
+Worker 62 Job 15
+Worker 63 Job 67
+Worker 64 Job 57
+Worker 65 Job 24
+Worker 66 Job 66
+Worker 67 Job 63
+Worker 68 Job 53
+Worker 69 Job 9
+Worker 70 Job 17
