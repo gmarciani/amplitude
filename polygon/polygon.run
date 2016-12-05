@@ -76,8 +76,9 @@ for {k in 3..10} {
   			break;
   		}
 
-  		if (iter == 100) then printf "No way\n";
-
+  		if (iter == 100) then {
+        printf "Optimal Solution NOT Found (%d)\n", solve_result_num;
+      }
     }
   }
 }

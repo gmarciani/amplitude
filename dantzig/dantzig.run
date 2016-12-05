@@ -49,5 +49,5 @@ if (solve_result_num == 0) then {
   printf "Workers/Jobs\n" >> out.txt;
   printf {w in 1..W, j in 1..J : x[w,j]>0} "Worker %d Job %d\n",w,j >> out.txt;
 } else {
-  print "Optimal Solution NOT Found";
+  printf "Optimal Solution NOT Found (%d)\n", solve_result_num;
 }

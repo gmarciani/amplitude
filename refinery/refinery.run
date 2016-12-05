@@ -48,5 +48,5 @@ if (solve_result_num == 0) then {
   printf "Pipes lenght: %f\n", pipes >> out.txt;
   printf "Refinery Coordinates: (%f,%f)\n",x,y >> out.txt;
 } else {
-  print "Optimal Solution NOT Found";
+  printf "Optimal Solution NOT Found (%d)\n", solve_result_num;
 }

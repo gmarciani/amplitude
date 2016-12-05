@@ -49,5 +49,5 @@ if (solve_result_num == 0) then {
   printf "Tank Width: %f\n", x1 >> out.txt;
   printf "Tank Height: %f\n", x2 >> out.txt;
 } else {
-  printf "Optimal Solution NOT Found (%d)\n",solve_result_num;
+  printf "Optimal Solution NOT Found (%d)\n", solve_result_num;
 }

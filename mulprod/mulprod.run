@@ -49,5 +49,5 @@ if (solve_result_num == 0) then {
   printf "Product/Period\n" >> out.txt;
   printf {p in P, t in 1..T} "Product %s Period %d: %d\n",p,t,x[p,t] >> out.txt;
 } else {
-  print "Optimal Solution NOT Found";
+  printf "Optimal Solution NOT Found (%d)\n", solve_result_num;
 }

@@ -49,5 +49,5 @@ if (solve_result_num == 0) then {
   printf "Production Plan\n" >> out.txt;
   printf {p in P} "Product %d: %d\n",p,x[p] >> out.txt;
 } else {
-  print "Optimal Solution NOT Found";
+  printf "Optimal Solution NOT Found (%d)\n", solve_result_num;
 }
