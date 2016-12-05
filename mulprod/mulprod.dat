@@ -1,0 +1,39 @@
+#===============================================================================
+# MULTI-PERIOD PRODUCTION PROBLEM (Data)
+#===============================================================================
+
+data;
+
+# products
+set P := A B;
+
+# periods
+param T := 3;
+
+# demand of product in period (unit)
+param D:
+        1     2     3     :=
+    A   9000  9000  9000
+    B   8000  8000  8000  ;
+
+# production limit for production line (hour)
+param: L     :=
+    1  4500
+    2  1000
+    3  500   ;
+
+# production time for product (hour/unit)
+param: W     :=
+    A  0.10
+    B  0.12  ;
+
+# material cost for product (euro/unit)
+param: CM   :=
+    A  1.5
+    B  2.0  ;
+
+# working cost (euro/hour)
+param CW := 3;
+
+# storage cost (euro/unit/period)
+param CS := 0.25;

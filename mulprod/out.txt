@@ -1,0 +1,15 @@
+============================================================================= 
+MULTI-PERIOD PRODUCTION PROBLEM 
+Model : mulprod.mod 
+Data  : mulprod.dat 
+Solver: KNITRO 
+Author: Giacomo Marciani <gmarciani@acm.org> 
+==============================================================================
+Cost: 112990.000000
+Product/Period
+Product A Period 1: 11999
+Product A Period 2: 10000
+Product A Period 3: 5000
+Product B Period 1: 23999
+Product B Period 2: 0
+Product B Period 3: 0

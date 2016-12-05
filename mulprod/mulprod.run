@@ -1,0 +1,53 @@
+#===============================================================================
+# MULTI-PERIOD PRODUCTION PROBLEM (Script)
+#===============================================================================
+reset;
+reset options;
+
+#===============================================================================
+# HEADER
+#===============================================================================
+print
+"============================================================================= \
+MULTI-PERIOD PRODUCTION PROBLEM \
+Model : mulprod.mod \
+Data  : mulprod.dat \
+Solver: KNITRO \
+Author: Giacomo Marciani <gmarciani@acm.org> \
+=============================================================================="
+> out.txt;
+
+#===============================================================================
+# PROBLEM DECLARATION
+#===============================================================================
+model mulprod.mod;
+data mulprod.dat;
+
+#===============================================================================
+# AMPL OPTIONS
+#===============================================================================
+option prompt1 "[AMPL]> ";
+option display_width 80;
+option display_1col 0;
+option relax_integrality 1;
+
+#===============================================================================
+# SOLVER OPTIONS
+#===============================================================================
+option knitro_options "outlev=1";
+#option knitro_options "relax=1";
+option solver knitro;
+
+#===============================================================================
+# RESOLUTION
+#===============================================================================
+solve;
+
+if (solve_result_num == 0) then {
+  print "Optimal Solution Found";
+  printf "Cost: %f\n", cost >> out.txt;
+  printf "Product/Period\n" >> out.txt;
+  printf {p in P, t in 1..T} "Product %s Period %d: %d\n",p,t,x[p,t] >> out.txt;
+} else {
+  print "Optimal Solution NOT Found";
+}
