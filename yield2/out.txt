@@ -1,0 +1,19 @@
+============================================================================= 
+YIELD MANAGEMENT PROBLEM 
+Model : yield.mod 
+Data  : yield.dat 
+Solver: CPLEX 
+Author: Giacomo Marciani <gmarciani@acm.org> 
+==============================================================================
+Profit: 98050.000000
+Routes/Tickets
+NA-RM:420
+NA-FI:280
+NA-BO:0
+NA-MI:0
+RM-FI:45
+RM-BO:0
+RM-MI:375
+FI-BO:160
+FI-MI:165
+BO-MI:160

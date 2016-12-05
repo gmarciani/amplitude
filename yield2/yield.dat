@@ -1,0 +1,25 @@
+#===============================================================================
+# YIELD MANAGEMENT PROBLEM (Data) 2nd version
+#===============================================================================
+
+data;
+
+# stations
+set S := NA RM FI BO MI;
+
+# routes
+set R := (NA,RM) (NA,FI) (NA, BO) (NA,MI) (RM,FI) (RM,BO) (RM,MI), (FI,BO) (FI,MI) (BO, MI);
+
+# routes price
+param P := NA RM 45 NA FI 72 NA BO 80 NA MI 100
+    RM FI 45 RM BO 59 RM MI 100
+    FI BO 25 FI MI 53
+    BO MI 42;
+
+# routes demand
+param D:=NA RM 420 NA FI 355 NA BO 335 NA MI 480
+RM FI 150 RM BO 200 RM MI 375
+FI BO 250 FI MI 300
+BO MI 160;
+
+param C := 700; # train capacity

@@ -1,0 +1,53 @@
+#===============================================================================
+# YIELD MANAGEMENT PROBLEM (Script) 2nd version
+#===============================================================================
+reset;
+reset options;
+
+#===============================================================================
+# HEADER
+#===============================================================================
+print
+"============================================================================= \
+YIELD MANAGEMENT PROBLEM \
+Model : yield.mod \
+Data  : yield.dat \
+Solver: CPLEX \
+Author: Giacomo Marciani <gmarciani@acm.org> \
+=============================================================================="
+> out.txt;
+
+#===============================================================================
+# PROBLEM DECLARATION
+#===============================================================================
+model yield.mod;
+data yield.dat;
+
+#===============================================================================
+# AMPL OPTIONS
+#===============================================================================
+option prompt1 "[AMPL]> ";
+option display_width 80;
+option display_1col 0;
+option relax_integrality 1;
+
+#===============================================================================
+# SOLVER OPTIONS
+#===============================================================================
+option cplex_options "outlev=1";
+#option cplex_options "relax=1";
+option solver cplex;
+
+#===============================================================================
+# RESOLUTION
+#===============================================================================
+solve;
+
+if (solve_result_num == 0) then {
+  print "Optimal Solution Found";
+  printf "Profit: %f\n", profit >> out.txt;
+  printf "Routes/Tickets\n" >> out.txt;
+  printf {i in S, j in S: ord(i,S) < ord(j,S)}: "%s-%s:%d\n",i,j,x[i,j] >> out.txt;
+} else {
+  printf "Optimal Solution NOT Found (%d)\n", solve_result_num;
+}
