@@ -1,0 +1,7 @@
+============================================================================= 
+TRASH PROBLEM 
+Model : trash.mod 
+Data  : trash.dat 
+Solver: CPLEX 
+Author: Giacomo Marciani <gmarciani@acm.org> 
+==============================================================================

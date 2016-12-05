@@ -1,11 +1,64 @@
-/*******************************************************************************
-* TRASH PROBLEM (Script)
-*******************************************************************************/
+#===============================================================================
+# TRASH PROBLEM (Script)
+#
+# A company buys trash to extract materials to sell.
+# Each type of trash is characterized by: a cost (euro/ton, a maximum amount of
+# acquirable trash (ton), amount of material extractable from trash (%), cost
+# of residual trash (euro/ton).
+# Each material is characterized by: extraction cost from trash (euro/ton),
+# selling price (euro/ton).
+# Determine the amount of acquired trash and extracted materials, so to
+# maximize the profit.
+#===============================================================================
+reset;
+reset options;
 
+#===============================================================================
+# HEADER
+#===============================================================================
+print
+"============================================================================= \
+TRASH PROBLEM \
+Model : trash.mod \
+Data  : trash.dat \
+Solver: CPLEX \
+Author: Giacomo Marciani <gmarciani@acm.org> \
+=============================================================================="
+> out.txt;
+
+#===============================================================================
+# PROBLEM DECLARATION
+#===============================================================================
 model trash.mod;
 data trash.dat;
+
+#===============================================================================
+# AMPL OPTIONS
+#===============================================================================
+option prompt1 "[AMPL]> ";
+option display_width 80;
+option display_1col 0;
+#option relax_integrality 1;
+
+#===============================================================================
+# SOLVER OPTIONS
+#===============================================================================
+option cplex_options "outlev=1";
+#option cplex_options "relax=1";
 option solver cplex;
+
+#===============================================================================
+# RESOLUTION
+#===============================================================================
 solve;
 
-display profit;
-display x;
+if (solve_result_num == 0) then {
+  print "Optimal Solution Found";
+  printf "Profit: %f\n", profit >> out.txt;
+  printf "Acquired Trash\n";
+  printf {t in T}: "Trash %s : %f\n", t,y[t] >> out.txt;
+  printf "Material/Trash\n";
+  printf {m in M, t in T}: "Material %s from Trash %s : %f\n", m,t,x[m,t] >> out.txt;
+} else {
+  printf "Optimal Solution NOT Found (%d)\n", solve_result_num;
+}
