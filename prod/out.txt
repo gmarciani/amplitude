@@ -1,0 +1,12 @@
+============================================================================= 
+PRODUCTION PROBLEM 
+Model : prod.mod 
+Data  : prod.dat 
+Solver: CPLEX 
+Author: Giacomo Marciani <gmarciani@acm.org> 
+==============================================================================
+Profit: 409375.000000
+Production Plan
+Product 0: 156
+Product 0: 0
+Product 0: 218
