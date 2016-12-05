@@ -1,0 +1,9 @@
+============================================================================= 
+REFINERY PROBLEM 
+Model : refinery.mod 
+Data  : refinery.dat 
+Solver: SNOPT 
+Author: Giacomo Marciani <gmarciani@acm.org> 
+==============================================================================
+Pipes lenght: 9.105436
+Refinery Coordinates: (3.110967,3.693319)
