@@ -1,22 +1,33 @@
-/*******************************************************************************
-* POLYGON PROBLEM (Model)
-*
-* Let us consider N vertices in the goniometric circumference with positive Y.
-* One vertex must be in (0,0).
-* Determine the vertices position so to maximize the area of the built polygon .
-*******************************************************************************/
-
+#===============================================================================
+# POLYGON PROBLEM (Model)
+#
+# Let us consider N vertices in the goniometric circumference with positive Y.
+# One vertex must be in (0,0).
+# Determine the vertices position so to maximize the area of the built polygon .
+#===============================================================================
 reset;
 
+#===============================================================================
+# PARAMETERS
+#===============================================================================
 param pi := 3.141592; # greek pi
 param N integer > 2;  # number of vertices
 
+#===============================================================================
+# DECISION VARIABLES
+#===============================================================================
 var r {i in 1..N};    # vertices radius
 var a {i in 1..N};    # vertices angle
 
+#===============================================================================
+# OBJECTIVE
+#===============================================================================
 maximize area:        # polygon area
   0.5*sum{i in 1..N-1} (r[i+1]*r[i]*sin(a[i+1]-a[i]));
 
+#===============================================================================
+# BOUNDS
+#===============================================================================
 subject to bound_radius {i in 1..N}: # radius for Y-positive plain
   0.0 <= r[i] <= 1.0;
 
