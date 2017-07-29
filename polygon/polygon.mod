@@ -3,7 +3,7 @@
 #
 # Let us consider N vertices in the goniometric circumference with positive Y.
 # One vertex must be in (0,0).
-# Determine the vertices position so to maximize the area of the built polygon .
+# Determine the vertices position so to maximize the area of the built polygon.
 #===============================================================================
 reset;
 

@@ -10,8 +10,8 @@ reset options;
 print
 "============================================================================= \
 PRODUCTION PROBLEM \
-Model : prod.mod \
-Data  : prod.dat \
+Model : production.mod \
+Data  : production.dat \
 Solver: CPLEX \
 Author: Giacomo Marciani <gmarciani@acm.org> \
 =============================================================================="
@@ -20,8 +20,8 @@ Author: Giacomo Marciani <gmarciani@acm.org> \
 #===============================================================================
 # PROBLEM DECLARATION
 #===============================================================================
-model prod.mod;
-data prod.dat;
+model production.mod;
+data production.dat;
 
 #===============================================================================
 # AMPL OPTIONS

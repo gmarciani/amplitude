@@ -1,5 +1,9 @@
 #===============================================================================
 # TRASH PROBLEM (Model)
+#
+# Optimize the acquiring of recyclable trash materials, taking into account the
+# cost of trash materials, the selling price of extractable resources and the
+# percentage of extractable resources.
 #===============================================================================
 reset;
 

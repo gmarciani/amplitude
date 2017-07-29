@@ -7,7 +7,7 @@
 # A product needs an amount of Pm kg of prime materials M.
 # Each prime material costs Mprice euro/kg.
 # The company can acquire Mmax kg of prime material, monthly.
-# Determine the monthly production plan of products, so to maximixe the
+# Determine the monthly production plan of products, so to maximize the
 # monthly profit.
 #===============================================================================
 reset;
